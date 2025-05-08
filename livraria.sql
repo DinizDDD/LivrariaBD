@@ -1,13 +1,17 @@
+-- criei o banco de dados
 create database Livraria;
 
+-- entrei dentro do banco de dados
 use Livraria;
 
+-- criei a tabela autores
 create table autor(
     id_autor int PRIMARY KEY,
     nome varchar(255),
     nacionalidade varchar(255)
 )
 
+-- criei a tabela livros
 create table livro(
     id_livro int PRIMARY KEY,
     titulo varchar(255),
@@ -16,6 +20,7 @@ create table livro(
     preco decimal
 )
 
+-- criei a tabela clientes
 create table cliente(
     id_cliente int PRIMARY KEY,
     nome varchar(255),
@@ -23,6 +28,7 @@ create table cliente(
     cidade varchar(255),
 )
 
+-- creiei a tabela vendas
 create table venda(
     id_venda int PRIMARY KEY,
     FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
